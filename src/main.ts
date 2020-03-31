@@ -14,7 +14,7 @@ export default function convertBytes(size: number): string {
         return `${roundTwoDigits(tmp)}o`;
     }
 
-    let result: string;
+    let result: string | null = null;
     UNITS.some((unit) => {
         tmp = tmp / BYTES_TO_OCTET;
         if (tmp < BYTES_TO_OCTET) {

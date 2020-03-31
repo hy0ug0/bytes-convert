@@ -1,33 +1,18 @@
 import { terser } from 'rollup-plugin-terser';
 import ts from '@wessberg/rollup-plugin-ts';
 
+import pkg from './package.json';
+
 export default {
     input: 'src/main.ts',
     output: [
+        // CommonJS (for Node) and ES module (for bundlers) build
+        { file: pkg.main, format: 'cjs' },
+        { file: pkg.module, format: 'es' },
+        // browser-friendly UMD build
         {
-            file: 'build/cjs/bundle-cjs.js',
-            format: 'cjs',
-        },
-        {
-            file: 'build/es/bundle-es.js',
-            format: 'es',
-        },
-        {
-            file: 'build/amd/bundle-amd.js',
-            format: 'amd',
-        },
-        {
-            file: 'build/umd/bundle-umd.js',
+            file: pkg.browser,
             format: 'umd',
-            name: 'convertBytes',
-        },
-        {
-            file: 'build/system/bundle-system.js',
-            format: 'system',
-        },
-        {
-            file: 'build/iife/bundle-iife.js',
-            format: 'iife',
             name: 'convertBytes',
         },
     ],

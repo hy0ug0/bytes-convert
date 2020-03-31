@@ -1,7 +1,9 @@
 {
     "name": "bytes-convert",
     "version": "1.0.2",
-    "main": "build/es/bundle-es.js",
+    "main": "dist/bytes-convert.cjs.js",
+    "module": "dist/bytes-convert.esm.js",
+    "browser": "dist/bytes-convert.umd.js",
     "license": "MIT",
     "repository": "git@github.com:hy0ug0/bytes-convert.git",
     "author": "hy0ug0 <hugo.contreras.pro@gmail.com>",
@@ -9,8 +11,8 @@
         "node": ">=12"
     },
     "scripts": {
-        "start": "yarn build -w",
-        "build": "rimraf build/ && rollup --config rollup.config.js",
+        "start": "rollup -c -w",
+        "build": "rimraf dist/ && rollup -c",
         "test": "jest",
         "format": "prettier --write"
     },

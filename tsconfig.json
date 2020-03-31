@@ -2,7 +2,9 @@
   "compilerOptions": {
     "declaration": true,
     "removeComments": true,
-    "target": "es2017"
+    "target": "ESNEXT",
+    "strict": true,
+    "esModuleInterop": true
   },
-  "exclude": ["node_modules", "build"]
+  "exclude": ["node_modules", "dist"]
 }
