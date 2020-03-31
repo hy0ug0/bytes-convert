@@ -20,6 +20,7 @@ jobs:
         run: yarn test
   build:
     name: Build
+    if: success()
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
@@ -34,6 +35,7 @@ jobs:
         run: yarn build
   release:
     name: Release
+    if: success()
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
