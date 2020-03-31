@@ -9,7 +9,7 @@ module.exports = {
             '@semantic-release/npm',
             {
                 npmPublish: true,
-                tarballDir: 'build',
+                pkgRoot: './build',
             },
         ],
     ],
