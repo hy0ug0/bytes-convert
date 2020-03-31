@@ -9,3 +9,5 @@ import convertBytes from 'bytes-convert';
 
 convertBytes(2078);
 ```
+
+Can be use directly in a HTML file.
