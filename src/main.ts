@@ -8,6 +8,10 @@ export default function convertBytes(size: number): string {
         throw new Error('Nothing to convert!');
     }
 
+    if (size < 0) {
+        throw new Error("Value can't be a negative number!");
+    }
+
     let tmp = size;
 
     if (tmp < BYTES_TO_OCTET) {
