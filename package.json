@@ -18,7 +18,8 @@
     "scripts": {
         "start": "rollup -c -w",
         "build": "rimraf dist/ && rollup -c",
-        "test": "jest --coverage",
+        "test": "jest",
+        "test:coverage": "jest --coverage",
         "format": "prettier --write"
     },
     "devDependencies": {
