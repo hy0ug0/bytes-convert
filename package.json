@@ -7,14 +7,18 @@
     "license": "MIT",
     "repository": "git@github.com:hy0ug0/bytes-convert.git",
     "author": "hy0ug0 <hugo.contreras.pro@gmail.com>",
-    "keywords": ["bytes", "octet", "convert"],
+    "keywords": [
+        "bytes",
+        "octet",
+        "convert"
+    ],
     "engines": {
         "node": ">=12"
     },
     "scripts": {
         "start": "rollup -c -w",
         "build": "rimraf dist/ && rollup -c",
-        "test": "jest",
+        "test": "jest --coverage",
         "format": "prettier --write"
     },
     "devDependencies": {
