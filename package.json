@@ -20,7 +20,8 @@
         "build": "rimraf dist/ && rollup -c",
         "test": "jest",
         "test:coverage": "jest --coverage",
-        "format": "prettier --write"
+        "format": "prettier --write",
+        "lint": "eslint src/*.ts"
     },
     "devDependencies": {
         "@babel/preset-env": "7.9.6",
