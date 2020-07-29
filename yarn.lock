@@ -1851,10 +1851,10 @@
     semver "^7.3.2"
     ua-parser-js "^0.7.21"
 
-"@wessberg/rollup-plugin-ts@1.2.29":
-  version "1.2.29"
-  resolved "https://registry.yarnpkg.com/@wessberg/rollup-plugin-ts/-/rollup-plugin-ts-1.2.29.tgz#28199abce81149eec4e6e5bd80f234220d1fd760"
-  integrity sha512-0hYLZ7vPg2VXF5r1IdRPC29ZQF+oPAyeX7baxmsmtHBiAkl2BvuBZt7PTYAv+EY1kLKW/bz3Ez6p2gVLQmE60Q==
+"@wessberg/rollup-plugin-ts@1.2.34":
+  version "1.2.34"
+  resolved "https://registry.yarnpkg.com/@wessberg/rollup-plugin-ts/-/rollup-plugin-ts-1.2.34.tgz#760253caec08166ba587fbf42349ae705bebad23"
+  integrity sha512-Uo/lzbVDHscxu64SQZn79w7bs2mLi1bHPswnyv6uE4X67vdr+BG2eZ74n5e7kGhe7mKdE/Kwn3I7LIFa5FQ+5g==
   dependencies:
     "@babel/core" "^7.10.5"
     "@babel/plugin-proposal-async-generator-functions" "^7.10.5"
