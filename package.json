@@ -32,7 +32,7 @@
         "@wessberg/rollup-plugin-ts": "1.2.34",
         "commitizen": "4.1.2",
         "cz-conventional-changelog": "3.2.0",
-        "eslint": "7.5.0",
+        "eslint": "7.6.0",
         "eslint-config-prettier": "6.11.0",
         "eslint-plugin-import": "2.22.0",
         "husky": "4.2.5",
