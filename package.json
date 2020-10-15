@@ -4,7 +4,7 @@
     "main": "dist/bytes-convert.cjs.js",
     "module": "dist/bytes-convert.esm.js",
     "browser": "dist/bytes-convert.umd.js",
-    "license": "MIT",
+    "license": "GPL-3.0",
     "repository": "git@github.com:hy0ug0/bytes-convert.git",
     "author": "hy0ug0 <hugo.contreras.pro@gmail.com>",
     "keywords": [
