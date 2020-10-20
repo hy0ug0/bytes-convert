@@ -32,7 +32,7 @@ jobs:
             - name: Install dependencies
               run: yarn
             - name: Test & publish code coverage
-              uses: paambaati/codeclimate-action@v2.6.0
+              uses: paambaati/codeclimate-action@v2.7.4
               env:
                   CC_TEST_REPORTER_ID: 084af3bbe3cc91bbc1736a554927945dffef81ed4395efac20b803770174a051
               with:
