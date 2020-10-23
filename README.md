@@ -10,19 +10,23 @@ A simple JavaScript module to convert bytes to octet.
 ### In Node.js
 
 ```javascript
-const convertBytes = require('bytes-convert');
-// OR
-import convertBytes from 'bytes-convert';
+const bytesConvert = require('bytes-convert');
 
-convertBytes(2078);
+bytesConvert.convert(2078);
+
+// OR
+
+import { convert } from 'bytes-convert';
+
+convert(2078);
 ```
 
 ### In browser
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/bytes-convert@2.0.0/dist/bytes-convert.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bytes-convert/dist/bytes-convert.umd.min.js"></script>
 
 <script>
-    convertBytes(2078);
+    bytesConvert.convert(2078);
 </script>
 ```

@@ -1,8 +1,12 @@
 import roundTwoDigits from './roundTwoDigits';
+import { Units } from './Units.enum';
 
-export default function convertBytes(size: number): string {
-    const BYTES_TO_OCTET = 1024;
-    const UNITS = ['Ko', 'Mo', 'Go', 'To'];
+export { Units };
+
+export function convert(size: number, unit: Units = Units.OCTET): string {
+    if (unit !== Units.BYTE && unit !== Units.OCTET) {
+        throw new Error('Unit not supported!');
+    }
 
     if (!size) {
         throw new Error('Nothing to convert!');
@@ -12,16 +16,23 @@ export default function convertBytes(size: number): string {
         throw new Error("Value can't be a negative number!");
     }
 
+    const unitsValues = {
+        [Units.BYTE]: ['KB', 'MB', 'GB', 'TB'],
+        [Units.OCTET]: ['Ko', 'Mo', 'Go', 'To'],
+    };
+    const BITS_TO_OCTET = 1024;
+    const UNITS = unitsValues[unit];
+
     let tmp = size;
 
-    if (tmp < BYTES_TO_OCTET) {
-        return `${roundTwoDigits(tmp)}o`;
+    if (tmp < BITS_TO_OCTET) {
+        return `${roundTwoDigits(tmp)}${unit === Units.OCTET ? 'o' : 'B'}`;
     }
 
     let result: string | null = null;
     UNITS.some((unit) => {
-        tmp = tmp / BYTES_TO_OCTET;
-        if (tmp < BYTES_TO_OCTET) {
+        tmp = tmp / BITS_TO_OCTET;
+        if (tmp < BITS_TO_OCTET) {
             result = `${roundTwoDigits(tmp)}${unit}`;
             return true;
         }
