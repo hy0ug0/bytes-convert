@@ -6,14 +6,15 @@ import pkg from './package.json';
 export default {
     input: 'src/main.ts',
     output: [
-        // CommonJS (for Node) and ES module (for bundlers) build
+        // CommonJS (for Node)
         { file: pkg.main, format: 'cjs' },
+        // ES module (for bundlers) build
         { file: pkg.module, format: 'es' },
         // browser-friendly UMD build
         {
             file: pkg.browser,
             format: 'umd',
-            name: 'convertBytes',
+            name: 'bytesConvert',
         },
     ],
     plugins: [
