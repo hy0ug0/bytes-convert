@@ -1,5 +1,6 @@
 # bytes-convert
 
+![Release](https://github.com/hy0ug0/bytes-convert/workflows/Release/badge.svg?branch=master)
 <a href="https://codeclimate.com/github/hy0ug0/bytes-convert/maintainability"><img src="https://api.codeclimate.com/v1/badges/1b2594668f2e70da2969/maintainability" /></a>
 <a href="https://codeclimate.com/github/hy0ug0/bytes-convert/test_coverage"><img src="https://api.codeclimate.com/v1/badges/1b2594668f2e70da2969/test_coverage" /></a>
 
