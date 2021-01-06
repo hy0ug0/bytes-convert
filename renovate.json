@@ -3,6 +3,17 @@
     "config:base"
   ],
   "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "packageRules": [
+    {
+      "depTypeList": [
+        "devDependencies"
+      ],
+      "automerge": true
+    }
+  ],
   "hostRules": [
     {
       "domainName": "github.com",
