@@ -2,11 +2,7 @@
   "extends": [
     "config:base"
   ],
-  "packageRules": [
-    {
-      "automerge": true
-    }
-  ],
+  "automerge": true,
   "hostRules": [
     {
       "domainName": "github.com",
