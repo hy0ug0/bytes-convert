@@ -10,6 +10,7 @@ module.exports = {
                     { type: 'docs', scope: 'README', release: 'patch' },
                     { type: 'refactor', release: 'patch' },
                     { type: 'ci', release: 'patch' },
+                    { type: 'chore', release: 'minor' }
                 ],
             },
         ],
