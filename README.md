@@ -4,7 +4,7 @@
 <a href="https://codeclimate.com/github/hy0ug0/bytes-convert/maintainability"><img src="https://api.codeclimate.com/v1/badges/1b2594668f2e70da2969/maintainability" /></a>
 <a href="https://codeclimate.com/github/hy0ug0/bytes-convert/test_coverage"><img src="https://api.codeclimate.com/v1/badges/1b2594668f2e70da2969/test_coverage" /></a>
 
-A simple JavaScript module to convert bytes to octet.
+A simple JavaScript module to convert bits to either bytes or octet.
 
 ## Usage
 
@@ -13,13 +13,27 @@ A simple JavaScript module to convert bytes to octet.
 ```javascript
 const bytesConvert = require('bytes-convert');
 
-bytesConvert.convert(2078);
+bytesConvert.convertFromOctet(65631);
+// '65.63Ko'
+
+bytesConvert.convertFromBits(6563123);
+// '820.39Ko'
 
 // OR
 
-import { convert } from 'bytes-convert';
+import { convertFromOctet, convertFromBits, Units } from 'bytes-convert';
 
-convert(2078);
+convertFromOctet(65631);
+convertFromOctet(65631, Units.OCTET);
+// '65.63Ko'
+convertFromOctet(65631, Units.BYTE);
+// '6.56MB'
+
+convertFromBits(6563123);
+convertFromBits(6563123, Units.OCTET);
+// '820.39Ko'
+convertFromBits(6563123, Units.BYTE);
+// '820.39KB'
 ```
 
 ### In browser
@@ -28,6 +42,10 @@ convert(2078);
 <script src="https://cdn.jsdelivr.net/npm/bytes-convert/dist/bytes-convert.umd.min.js"></script>
 
 <script>
-    bytesConvert.convert(2078);
+    bytesConvert.convertFromOctet(65631);
+    // '65.63Ko'
+    
+    bytesConvert.convertFromBits(6563123);
+    // '820.39Ko'
 </script>
 ```
