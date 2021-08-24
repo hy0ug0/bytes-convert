@@ -45,12 +45,6 @@
         "ts-jest": "27.0.5",
         "typescript": "4.3.5"
     },
-    "husky": {
-        "hooks": {
-            "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
-            "pre-commit": "lint-staged"
-        }
-    },
     "lint-staged": {
         "*.ts": "yarn format"
     },
